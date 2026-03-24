@@ -1,0 +1,38 @@
+{
+  "name": "event-brite-bot",
+  "version": "1.0.0",
+  "description": "Event brite bot - helps to subscribe you to eventbrite events",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "rm -rf dist && tsc -p tsconfig.json",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js",
+    "bot": "tsx src/index.ts",
+    "login": "tsx src/cli/login.ts",
+    "auth:attach": "tsx src/cli/attachAuth.ts",
+    "test": "vitest run src",
+    "test:watch": "vitest src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/max-mayorov/event-brite-bot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/max-mayorov/event-brite-bot/issues"
+  },
+  "homepage": "https://github.com/max-mayorov/event-brite-bot#readme",
+  "dependencies": {
+    "playwright": "^1.58.2",
+    "telegraf": "^4.16.3"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.2",
+    "vitest": "^4.1.1"
+  }
+}
