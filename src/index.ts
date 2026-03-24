@@ -16,7 +16,7 @@ async function main(): Promise<void> {
 
   const store = new WatchStore(config.watchFilePath);
   const automation = new EventbriteAutomation(config);
-  let bot = undefined as ReturnType<typeof createBot> | undefined;
+  let bot: ReturnType<typeof createBot> | undefined;
   const scheduler = new WatchScheduler(config, store, automation, async (chatId, message) => {
     if (!bot) {
       return;
@@ -33,7 +33,7 @@ async function main(): Promise<void> {
   const shutdown = async (signal: string) => {
     log(`Received ${signal}, shutting down`);
     scheduler.stop();
-    await bot.stop(signal);
+    bot?.stop(signal);
     process.exit(0);
   };
 

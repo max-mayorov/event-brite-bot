@@ -19,7 +19,7 @@ Eventbrite offers APIs for discovery and organizer workflows, but attendee regis
 - **file-based persistence** for a zero-database setup
 - **Docker** as an optional deployment wrapper
 
-See `/home/runner/work/event-brite-bot/event-brite-bot/ARCHITECTURE.md` for the full reasoning.
+See `./ARCHITECTURE.md` for the full reasoning.
 
 ## Guardrails
 
